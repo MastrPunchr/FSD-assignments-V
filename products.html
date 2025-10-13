@@ -1,9 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product Page</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="margin: 5px">
+  <header>
+    <nav class="navbar">
+      <ul class="nav-content">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="products.html" class="active-link">PRODUCTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <h1>Our Products</h1>
+      <h3>Quality and Innovation At Your Fingertips!</h3>
+    </div>
+  </header>
+  <main>
+    <div class="hero">
+      <h1>Explore Our Range of Products</h1>
+      <img src="images/buttons.png" class="hero-img">
+      <p>Discover the unparalleled quality and innovation that defines every product at Amazing Company X. Each item in
+        our catalogue is the result of meticulous engineering and design, crafted to meet the diverse needs of our
+        valued customers. Explore our range of products, each designed to enhance efficiency, usability, and bring value
+        to your personal and professional spaces. </p>
+    </div>
+    <div class="table-container">
+      <p style="text-align: center; font-style: italic, 16px;">A comprehensive list of high-quality products offered by
+        Amazing Company X.</p>
+      <table class="product-table">
+        <tr>
+          <th colspan="4">Product Catalogue</th>
+        </tr>
+        <tr>
+          <th>Product Category</th>
+          <th>Product Name</th>
+          <th>Product Number</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <th rowspan="3">Widgets</th>
+          <td>Right Widget</td>
+          <td>RW-0001</td>
+          <td>$500.00</td>
+        </tr>
+        <tr>
+          <td>Left Widget</td>
+          <td>LW0002</td>
+          <td>$750.00</td>
+        </tr>
+        <tr>
+          <td>Universal Widget</td>
+          <td>UW0003</td>
+          <td>$1200.00</td>
+        </tr>
+        <tr>
+          <th rowspan="5">Buttons</th>
+          <td>Red Button</td>
+          <td>RB-0001</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>Blue Button</td>
+          <td>BB-0002</td>
+          <td>$7.44</td>
+        </tr>
+        <tr>
+          <td>Purple Button</td>
+          <td>PB-0003</td>
+          <td>$2.22</td>
+        </tr>
+        <tr>
+          <td>Orange Button</td>
+          <td>OB-0004</td>
+          <td>$61.00</td>
+        </tr>
+        <tr>
+          <td>Lemon Button</td>
+          <td>LB-0005</td>
+          <td>$5.77</td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>For bulk orders and special requests, <a href="#" style="color: black; text-decoration: none;">contact us</a>.
+    </p>
+    <button type="buttton" class="footer-button" id="back-to-top"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Back to top</button>
+  </footer>
+</body>
+
 </html>
