@@ -124,12 +124,42 @@ body {
 .contact-form{
     width: 80%;
     margin: auto;
-    padding: 10px;
+    padding: 10px 50px 35px 30px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-#email{
+.contact-form label{
+    padding: 20px 0 0;
+}
+
+.contact-form input, .contact-form textarea {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-submit{
+    margin-top: 20px;
+    padding: 9px;
+    border: none;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 17%
+}
+
+.email-footer{
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
