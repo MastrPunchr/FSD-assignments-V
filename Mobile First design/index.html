@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile first test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="#">MySite</a>
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle Navigation"></button>
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Home</a></li>
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#contact">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Simple, Responsive and Accessible</h1>
+                <p class="lead">A minimal mobile-first template</p>
+                <p><a class="btn" href="#features"></a>Explore Features</p>
+            </div>
+        </section>
+        <section id="features" class="features container">
+            <article class="feature">
+                <h2>Fluid Layout</h2>
+                <p>Content scales naturally with the viewport using fluid containers and clamp for typography.</p>
+            </article>
+            <article class="feature">
+                <h2>Accessible nav</h2>
+                <p>Keyboard frienldy controls and clear focus styles</p>
+                </article>
+            <article class="feature">
+                <h2>Lightweight</h2>
+                <p>No frameworks - just plain HTML and CSS for fast load and easy customization</p>
+            </article>
+        </section>
+        <section id="contact" class="container contact">
+            <h2>Contact</h2>
+            <form class="contact-form" action"#" method="post">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required>
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Say Hi"></textarea>
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">&copy; <span id="year"></span>MySite - Built for learning</div>
+    </footer>
+</body>
+</html>

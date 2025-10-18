@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation test</title>
+    <style>
+        .box{
+            background-color:violet;
+            border-radius: 5px;
+            transform: rotate(0) translate(0) scale(1);
+            margin: auto;
+            width: 10%;
+            transition: transform 0.5s ease, box-shadow 0.5s ease-in;
+            animation: fade-in-up 1s ease forwards;
+        }
+
+        .box:hover{
+            transform: scale(1.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .card{
+            background-color: blueviolet;
+            border-radius: 5px;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .card-heading{
+            background-color: violet;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-heading{
+            transform: scale(1.2);
+        }
+
+        .item-1, .item-2, .item-3{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 10px;
+            opacity: 0;
+            animation: fade-in-up 1s ease backwards;
+        }
+
+        .item-2{
+            animation-delay: 0.1s;
+        }
+
+        .item-3{
+            animation-delay: 0.2s;
+        }
+
+        @keyframes fade-in-up{
+            0%{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"
+        <p>hi</p>
+    </div>
+    <div class="card">
+        <div class="card-heading"></div>
+    </div>
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+</body>
+</html>
