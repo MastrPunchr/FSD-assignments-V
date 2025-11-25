@@ -4,130 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jolly Inc. - Our History</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #f10000 0%, #ebebeb 50%, #03c223 100%);
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav h2 {
-            color: white;
-            font-size: 28px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: opacity 0.3s;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 48px;
-            color: #ff6b6b;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .intro-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-
-        .intro-text {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .intro-text p {
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .highlight {
-            color: #ff6b6b;
-            font-weight: bold;
-        }
-
-        .satire {
-            font-style: italic;
-            color: #888;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            background-color: #f0f0f0;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed #ddd;
-        }
-
-        @media (max-width: 768px) {
-            .intro-section {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            nav ul {
-                gap: 15px;
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css" 
 </head>
 <body>
     <header>
@@ -135,10 +12,10 @@
             <h2>🎉 Jolly Inc.</h2>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/services.html">Services</a></li>
-                <li><a href="pages/pricelist.html">Pricing</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricelist.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -150,12 +27,89 @@
 
         <section class="container intro-section">
             <div class="intro-text">
-                
+                <p>Ready to bring <span class="highlight">jolliness</span> to your space? Get in touch with our team of certified festive professionals!</p>
+
+                <p><span class="highlight">Phone:</span> 1-800-JOLLY-NOW (1-800-565-5969)</p>
+
+                <p><span class="highlight">Email:</span> hello@jollyinc.com</p>
+
+                <p><span class="highlight">Headquarters:</span> 123 Festive Lane, Omaha, Nebraska 68102, USA</p>
+
+                <p><span class="highlight">Hours:</span> Monday - Friday, 9:00 AM - 5:00 PM (Central Time)</p>
+
+                <p>Have questions about our services? Need a custom jolliness package? Our team is standing by to transform your workplace into a hub of mandatory merriment!</p>
             </div>
 
-            <div class="milestones">
-
+            <div>
+                <img src="../office.jpg" alt="Jolly Inc. Office Location" />
             </div>
+        </section>
+
+        <section class="container form-section">
+            <h2>Get in Touch</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" />
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" /> Male</label>
+                        <label><input type="radio" name="gender" value="female" /> Female</label>
+                        <label><input type="radio" name="gender" value="female" /> Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="canada">Canada</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="newsletter" /> Subscribe to Newsletter</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="satisfaction">Satisfaction Level (1 to 10):</label>
+                    <div class="slider-group">
+                        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" />
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
 </body>
