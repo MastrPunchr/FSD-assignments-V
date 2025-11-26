@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a name="top"></a>
     <header>
         <nav class="container">
             <h2>🎉 Jolly Inc.</h2>
@@ -23,9 +24,12 @@
     <main>
         <div class="hero container">
             <h1>Welcome to Our Website!</h1>
+            <nav class="jump-links">
+                <a href="#about-section" class="anchor-btn">Jump to About</a>
+            </nav>
         </div>
 
-        <section class="container intro-section">
+        <section class="container intro-section" id="about-section">
             <div class="intro-text">
                 <p>At <span class="highlight">Jolly Inc.</span>, we believe that happiness is a commodity that can be professionally manufactured and installed in any environment. We are absolutely committed to bringing <span class="highlight">jolliness</span> to places that desperately need it.</p>
 
@@ -38,6 +42,10 @@
                 <img src="staff.webp" alt="Jolly Inc. Team Image" />
             </div>
         </section>
+
+        <footer class="container">
+            <a href="#top" class="back-to-top-btn">Back to Top</a>
+        </footer>
     </main>
 </body>
 </html>
