@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jolly Inc. - Contact Us</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <a name="top"></a>
     <header>
         <nav class="container">
-            <h2>🎉 Jolly Inc.</h2>
+            <h2 class="site-title">🎉 Jolly Inc.</h2>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -23,101 +24,97 @@
 
     <main>
         <div class="hero container">
-            <h1>Contact Us!</h1>
+            <h1>Contact Us</h1>
             <nav class="jump-links">
-                <a href="#contact-form" class="anchor-btn">Jump to Contact Form</a>
+                <a href="#contact-form" class="anchor-btn">Jump to Form</a>
             </nav>
         </div>
 
-        <section class="container intro-section">
-            <div class="intro-text">
-                <p>Ready to bring <span class="highlight">jolliness</span> to your space? Get in touch with our team of certified festive professionals!</p>
-
-                <p><span class="highlight">Phone:</span> 1-800-JOLLY-NOW (1-800-565-5969)</p>
-
-                <p><span class="highlight">Email:</span> hello@jollyinc.com</p>
-
-                <p><span class="highlight">Headquarters:</span> 123 Festive Lane, Omaha, Nebraska 68102, USA</p>
-
-                <p><span class="highlight">Hours:</span> Monday - Friday, 9:00 AM - 5:00 PM (Central Time)</p>
-
-                <p>Have questions about our services? Need a custom jolliness package? Our team is standing by to transform your workplace into a hub of mandatory merriment!</p>
-            </div>
-
-            <div>
-                <img src="../office.jpg" alt="Jolly Inc. Office Location" />
-            </div>
-        </section>
-
-        <section class="container form-section" id="contact-form">
+        <section class="form-section container" id="contact-form">
             <h2>Get in Touch</h2>
             <form>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" id="fullname" name="fullname" required />
+                        <label for="fname">First Name *</label>
+                        <input type="text" id="fname" name="fname" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
+                        <label for="lname">Last Name *</label>
+                        <input type="text" id="lname" name="lname" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" />
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="dob">Date of Birth:</label>
-                        <input type="date" id="dob" name="dob" />
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Gender:</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="gender" value="male" /> Male</label>
-                        <label><input type="radio" name="gender" value="female" /> Female</label>
-                        <label><input type="radio" name="gender" value="other" /> Other</label>
-                    </div>
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="country">Country:</label>
-                    <select id="country" name="country">
-                        <option value="canada">Canada</option>
-                        <option value="usa">United States</option>
-                        <option value="uk">United Kingdom</option>
-                        <option value="australia">Australia</option>
-                        <option value="other">Other</option>
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Interested In:</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="basic">Basic Jollification</option>
+                        <option value="festive">Festive Friday Boost</option>
+                        <option value="holiday">Holiday Spirit Intensive</option>
+                        <option value="training">Corporate Cheerleader Training</option>
+                        <option value="virtual">Virtual Jolliness Session</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address"></textarea>
-                </div>
-
-                <div class="form-group">
+                    <label>How did you hear about us?</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="newsletter" /> Subscribe to Newsletter</label>
+                        <label><input type="checkbox" name="source" value="google"> Google Search</label>
+                        <label><input type="checkbox" name="source" value="social"> Social Media</label>
+                        <label><input type="checkbox" name="source" value="friend"> Friend Referral</label>
+                        <label><input type="checkbox" name="source" value="other"> Other</label>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="satisfaction">Satisfaction Level (1 to 10):</label>
-                    <div class="slider-group">
-                        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" />
+                    <label>Preferred Contact Method:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contact-method" value="email"> Email</label>
+                        <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+                        <label><input type="radio" name="contact-method" value="either"> Either</label>
                     </div>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
 
-        <footer class="container">
-            <a href="#top" class="back-to-top-btn">Back to Top</a>
+        <footer class="container footer-section">
+            <div class="footer-content">
+                <a href="#top" class="back-to-top-btn">Back to Top</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </footer>
     </main>
 </body>
