@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Colorful CSS Grid Recreation</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(10, 100px);
+            grid-template-rows: repeat(10, 100px);
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid #333;
+            margin: 30px auto;
+            background: white;
+        }
+        .cell {
+            border: 1px solid #333;
+            box-sizing: border-box;
+        }
+        /* Color palette (adjust as needed for clarity) */
+        .c1 { background: #2f75b5; }
+        .c2 { background: #00B0F0; }
+        .c3 { background: #d9d9d9; }
+        .c4 { background: #66ccff; }
+        .c5 { background: #92d050; }
+        .c6 { background: #c00000; }
+        .c7 { background: #ffff00; }
+        .c8 { background: #ff00ff; }
+        .c9 { background: #f4b084; }
+        .c10 { background: #fce4d6; }
+        .c11 { background: #ffc000; }
+        .c12 { background: #aeaaaa; }
+        .c13 { background: #2f75b5; }
+        .c14 { background: #c65911; }
+        .c15 { background: #ffff99; }
+        .c16 { background: #ff0000; }
+        .c17 { background: #d6dce4; }
+        .c18 { background: #bdd7ee;}
+        .c19 { background: #e7e6e6;}
+        .c20 { background: #E2EFDA}
+        .c21 { background: #70AD47}
+        .c22 { background: #A9D08E}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Row 1 -->
+        <div class="cell c1" style="grid-area: 1 / 1 / 3 / 2;"></div>
+        <div class="cell c2" style="grid-area: 1 / 2 / 2 / 4;"></div>
+        <div class="cell c3" style="grid-area: 1 / 4 / 2 / 8"></div>
+        <div class="cell c4" style="grid-area: 1 / 8 / 2 / 10"></div>
+        <div class="cell c5" style="grid-area: 1 / 10 / 6 / 11"></div>
+
+        <div class="cell c6" style="grid-area: 2/2/3/5"></div>
+        <div class="cell c11" style="grid-area: 2/5/8/6"></div>
+        <div class="cell c8" style="grid-area: 2/6/3/7"></div>
+        <div class="cell c5" style="grid-area: 2/7/3/8"></div>
+        <div class="cell c9" style="grid-area: 2/8/3/10"></div>
+
+        <div class="cell c8" style="grid-area:3/1/4/2"></div>
+        <div class="cell c7" style="grid-area:3/2/4/5"></div>
+        <div class="cell c7" style="grid-area:3/6/4/9"></div>
+        <div class="cell c12" style="grid-area:3/9/8/10"></div>
+
+        <div class="cell c10" style="grid-area:4/1/7/2"></div>
+        <div class="cell c19" style="grid-area:4/2/8/3"></div>
+        <div class="cell c10" style="grid-area:4/3/5/4"></div>
+        <div class="cell c20" style="grid-area:4/4/5/5"></div>
+        <div class="cell c21" style="grid-area:4/6/6/7"></div>
+        <div class="cell c8" style="grid-area:4/7/5/9"></div>
+
+        <div class="cell c4" style="grid-area:5/3/6/5"></div>
+        <div class="cell c1" style="grid-area:5/7/6/9"></div>
+        
+        <div class="cell c8" style="grid-area:6/3/8/5"></div>
+        <div class="cell c6" style="grid-area:6/6/8/9"></div>
+        <div class="cell c8" style="grid-area:6/10/9/11"></div>
+        <div class="cell c1" style="grid-area:7/1/8/2"></div>
+        
+        <div class="cell c11" style="grid-area:8/1/9/3"></div>
+        <div class="cell c2" style="grid-area:8/3/10/4"></div>
+        <div class="cell c14" style="grid-area:8/4/11/6"></div>
+        <div class="cell c17" style="grid-area:8/6/11/7"></div>
+        <div class="cell c18" style="grid-area:8/7/9/10"></div>
+
+        <div class="cell c7" style="grid-area:9/1/11/2"></div>
+        <div class="cell c8" style="grid-area:9/2/10/3"></div>
+        <div class="cell c15" style="grid-area:9/7/11/9"></div>
+        <div class="cell c5" style="grid-area:9/9/11/10"></div>
+        <div class="cell c16" style="grid-area:9/10/10/11"></div>
+
+        <div class="cell c22" style="grid-area:10/2/11/4"></div>
+        <div class="cell c2" style="grid-area:10/10/11/11"></div>
+    </div>
+</body>
+</html>
