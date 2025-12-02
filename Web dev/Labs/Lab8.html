@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rainbow Flag</title>
+    <style>
+        .rainbow-rgb {
+            display: flex;
+            height: 100px;
+        }
+        
+        .stripe-rgb {
+            flex: 1;
+        }
+
+        .red-rgb { background-color: rgb(255, 0, 0); }
+        .orange-rgb { background-color: rgb(255, 127, 0); }
+        .yellow-rgb { background-color: rgb(255, 255, 0); }
+        .green-rgb { background-color: rgb(0, 128, 0); }
+        .blue-rgb { background-color: rgb(0, 0, 255); }
+        .indigo-rgb { background-color: rgb(75, 0, 130); }
+        .violet-rgb { background-color: rgb(148, 0, 211); }
+
+        .rainbow-hsl {
+            display: flex;
+            height: 100px;
+            margin-top: 20px;
+        }
+
+        .stripe-hsl {
+            flex: 1;
+        }
+
+        .red-hsl { background-color: hsl(0, 100%, 50%); }
+        .orange-hsl { background-color: hsl(30, 100%, 50%); }
+        .yellow-hsl { background-color: hsl(60, 100%, 50%); }
+        .green-hsl { background-color: hsl(120, 100%, 25%); }
+        .blue-hsl { background-color: hsl(240, 100%, 50%); }
+        .indigo-hsl { background-color: hsl(270, 100%, 25%); }
+        .violet-hsl { background-color: hsl(300, 100%, 41%); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+            width: 300px;
+        }
+
+        .box {
+            height: 100px;
+        }
+
+        .red-light { background-color: hsl(0, 100%, 80%); }
+        .red-normal { background-color: hsl(0, 100%, 50%); }
+        .red-dark { background-color: hsl(0, 100%, 25%); }
+
+        .green-light { background-color: hsl(120, 100%, 80%); }
+        .green-normal { background-color: hsl(120, 100%, 50%); }
+        .green-dark { background-color: hsl(120, 100%, 25%); }
+
+        .blue-light { background-color: hsl(240, 100%, 80%); }
+        .blue-normal { background-color: hsl(240, 100%, 50%); }
+        .blue-dark { background-color: hsl(240, 100%, 25%); }
+
+        table, tr, th, td{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Red, Green, Blue</li>
+        <li># from 0-255</li>
+        <li>It has an alpha channel</li>
+        <li>A stands for alpha, which is another word for transparency. It accepts a value from 0-100%</li>
+        <li>It is a six character code used to represent RGB values in hexadecimal (meaning it takes a value from 0 to f).</li>
+        <li>It contains an alpha channel which can take the input of 00 to FF</li>
+    </ol>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>RGB</th>
+            <th>HSL</th>
+            <th>Hex</th>
+        </tr>
+        <tr>
+            <th>Advantages</th>
+            <td>Directly relates to how screens display colour, precise</td>
+            <td>Easy to modify, allows you to think in terms of how we perceive colour</td>
+            <td>Compact, widely used in web design</td>
+        </tr>
+        <tr>
+            <th>Disadvantages</th>
+            <td>Less readable by humans making it harder to modify by perception, requires knowledge of colour mixing</td>
+            <td>Not yet widely implemented outside of web development, harder to convert between RGB and HSL</td>
+            <td>Can be harder to interpret without tools, requires conversion to RGB for any adjustments in lightness or saturation</td>
+        </tr>
+        <tr>
+            <th>Use case</th>
+            <td>When colours must be extremely accurate like working in imaging software</td>
+            <td>When colour variation is needed like in logos or interfaces</td>
+            <td>Where colours need to be short and readable like in code</td>
+        </tr>
+    </table>
+
+    <ol>
+        <li>in RGB it would be (255, 255, 0, 50%). In hsl it would be (30, 100%, 50%, 0.5) (note: decimals and percentage are interchangable for bot)</li>
+        <li>Modifying each channel changes the hue lightness and vibrance of a colour</li>
+        <li>RGB to Hex: divide R, G, and B by 16 with the quotient representing the first character and the remainder representijy the second</li>
+        <li>Hex to RGB: do a hexadecimal to decimal conversion for every pair of digits</li>
+        <li>RGB to HSL: Use an online converter because holy moly that formula is way overcomplicated</li>
+        <li>Once again just use a converter because it's pretty confusing</li>
+        <li>CMYK: Used for printing (Cyan Magenta Yellow Key). There are others but they don't see widespread usage throughout modern day electronics</li>
+        <li>RGB history: based on the Young–Helmholtz theory of trichromatic color vision, developed by Thomas Young and Hermann von Helmholtz in the early to mid-nineteenth century that was then later used to display colours on a digital screen using a combination of red, green, and blue lights.</li>
+        <li>Hexadecimal colour history: it's just RGB in Hexadecimal with the format originating from how X11 displayed colour a hundred years ago, and for some reason we still use X11 because X12 doesn't exist and X13, otherwise known as wayland, is still a buggy piece of trash. Hex becomes widespread in the early 1990s with the spread of the internet and websites.</li>
+        <li>HSL history: defined by Alvy Ray Smith in 1978 for computer graphics, adopted into CSS3 in 2014, used by AI-based design tools for programmatic adjustments</li>
+    </ol>
+
+    <table>
+        <tr>
+            <th>Color</th>
+            <th>RGB</th>
+            <th>HSL</th>
+            <th>Hex</th>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>rgb(255, 0, 0)</td>
+            <td>hsl(0, 100%, 50%)</td>
+            <td>#FF0000</td>
+        </tr>
+        <tr>
+            <td>Green</td>
+            <td>rgb(0, 255, 0)</td>
+            <td>hsl(120, 100%, 50%)</td>
+            <td>#00FF00</td>
+        </tr>
+        <tr>
+            <td>Blue</td>
+            <td>rgb(0, 0, 255)</td>
+            <td>hsl(240, 100%, 50%)</td>
+            <td>#0000FF</td>
+        </tr>
+    </table>
+
+
+
+
+
+    <h2>Rainbow Flag - RGB</h2>
+    <div class="rainbow-rgb">
+        <div class="stripe-rgb red-rgb"></div>
+        <div class="stripe-rgb orange-rgb"></div>
+        <div class="stripe-rgb yellow-rgb"></div>
+        <div class="stripe-rgb green-rgb"></div>
+        <div class="stripe-rgb blue-rgb"></div>
+        <div class="stripe-rgb indigo-rgb"></div>
+        <div class="stripe-rgb violet-rgb"></div>
+    </div>
+
+    <h2>Rainbow Flag - HSL</h2>
+    <div class="rainbow-hsl">
+        <div class="stripe-hsl red-hsl"></div>
+        <div class="stripe-hsl orange-hsl"></div>
+        <div class="stripe-hsl yellow-hsl"></div>
+        <div class="stripe-hsl green-hsl"></div>
+        <div class="stripe-hsl blue-hsl"></div>
+        <div class="stripe-hsl indigo-hsl"></div>
+        <div class="stripe-hsl violet-hsl"></div>
+    </div>
+
+    <h2>3x3 Color Intensity Grid</h2>
+    <div class="grid">
+        <div class="box red-light"></div>
+        <div class="box green-light"></div>
+        <div class="box blue-light"></div>
+        <div class="box red-normal"></div>
+        <div class="box green-normal"></div>
+        <div class="box blue-normal"></div>
+        <div class="box red-dark"></div>
+        <div class="box green-dark"></div>
+        <div class="box blue-dark"></div>
+    </div>
+
+    <ol>
+        <li>16777216 different colours</li>
+        <li>The red green and blue channels will all be the same value</li>
+        <li>From 0-9 and A-F</li>
+        <li>16777216 different colours since it is just a different representation of RGB values</li>
+        <li>CMYK. HSL and HSLA aren't supported in some old browsers but are generally supported nowadays</li>
+        <li>currentColor lets you use the same colour you are using for your text on other elements like border and background colour</li>
+        <li>It makes it easier for someone to interpret the changes they are making to a colour since it gives you specific aspects of the colour</li>
+    </ol>
+
+</body>
+</html>
