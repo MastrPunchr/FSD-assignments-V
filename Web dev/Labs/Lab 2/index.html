@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,9 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <a name="top"></a>
     <header>
@@ -35,16 +39,86 @@
 
         <section class="container intro-section" id="about-section">
             <div class="intro-text">
-                <p class="paragraph-style-1">At <span class="highlight">Jolly Inc.</span>, we believe that happiness is a commodity that can be professionally manufactured and installed in any environment. We are absolutely committed to bringing <span class="highlight">jolliness</span> to places that desperately need it.</p>
+                <p class="paragraph-style-1">At <span class="highlight">Jolly Inc.</span>, we believe that happiness is
+                    a commodity that can be professionally manufactured and installed in any environment. We are
+                    absolutely committed to bringing <span class="highlight">jolliness</span> to places that desperately
+                    need it.</p>
 
-                <p class="paragraph-style-2">Whether your workplace is filled with the sounds of sighing spreadsheets, your school hallways echo with existential dread, or your community center could use a genuine smile or two, we've got you covered. <span class="satire">Our certified jolly professionals are trained in the ancient art of forced cheer and strategic cheerfulness deployment.</span></p>
+                <p class="paragraph-style-2">Whether your workplace is filled with the sounds of sighing spreadsheets,
+                    your school hallways echo with existential dread, or your community center could use a genuine smile
+                    or two, we've got you covered. <span class="satire">Our certified jolly professionals are trained in
+                        the ancient art of forced cheer and strategic cheerfulness deployment.</span></p>
 
-                <p class="paragraph-style-3">Let us <span class="highlight">jolly up</span> your space with our proven methods of workplace happiness, educational enthusiasm, and community morale enhancement. Because who doesn't love a little mandatory fun?</p>
+                <p class="paragraph-style-3">Let us <span class="highlight">jolly up</span> your space with our proven
+                    methods of workplace happiness, educational enthusiasm, and community morale enhancement. Because
+                    who doesn't love a little mandatory fun?</p>
             </div>
 
             <div>
                 <img src="staff.webp" alt="Jolly Inc. Team Image" />
             </div>
+        </section>
+
+        <section class="container form-section">
+            <h2>Personal Information</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" name="newsletter"> Subscribe to Newsletter</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="satisfaction">Satisfaction Level (1 to 10):</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
         </section>
 
         <footer class="container footer-section">
@@ -65,4 +139,5 @@
         </footer>
     </main>
 </body>
+
 </html>

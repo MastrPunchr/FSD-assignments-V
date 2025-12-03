@@ -9,7 +9,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Selectors</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      /*I used a style element just because it made it easier to organise all of my labs*/
+      main, header, section, footer{
+        border: 1px solid;
+      }
+
+      .only p{
+        color: red;
+      }
+
+      ul li:first-of-type{
+        background-color: dodgerblue;
+      }
+
+      h1, h2, h3{
+        background-color: green;
+      }
+
+      tr:nth-of-type(odd){
+        background-color: lightgray;
+      }
+
+      li a:hover{
+        font-size: 28px;
+      }
+
+      .strike{
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
     <header>
