@@ -1,0 +1,116 @@
+<!--1. .name:first-of-type{}-->
+<!--2. .thor{}-->
+<!--3. p{}-->
+<!--4. div, h1{}-->
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+          <li><a href="https://w3schools.com">W3 Schools CSS Selectors</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">MDN CSS Selectors</a></li>
+          <li><a href="https://somewebsite.doesntexist">Some Website I've Never Visited</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>CSS Selectors</h1>
+      <span>SPAN Tag Direct Child</span>
+      <ul>
+        <li>Universal Selector <span>SPAN Tag Descendant</span></li>
+        <li>Type Selector</li>
+        <li>Class Selector</li>
+        <li>ID Selector</li>
+        <li>Attribute Selector</li>
+      </ul>
+
+      <h2>Grouping Selectors</h2>
+      <p>Use a comma (,) to group selectors</p>
+      <p>Use a comma (,) to group selectors</p>
+
+      <h2>Combinators</h2>
+      <ul id="combinators">
+        <li>Descendant combinator</li>
+        <li>Child combinator</li>
+        <li>General sibling combinator</li>
+        <li class="strike">Adjacent sibling combinator</li>
+      </ul>
+    </main>
+    <span>SPAN Tag Adjacent Sibling</span>
+    <section class="pseudo">
+      <h2>Pseudo</h2>
+      <h3>Pseudo classes</h3>
+      <p>
+        The : pseudo allow the selection of elements based on state information
+        that is not contained in the document tree.
+      </p>
+      <ul>
+        <li>First Child</li>
+        <li>Last Child</li>
+        <li>Nth Child</li>
+        <li>Nth Last Child</li>
+        <li>Only Child</li>
+        <li>First of Type</li>
+        <li>Last of Type</li>
+        <li>Nth of Type</li>
+        <li>Nth Last of Type</li>
+        <li>Only of Type</li>
+        <li>Not</li>
+      </ul>
+
+      <h3 class="strike">Pseudo elements</h3>
+      <p class="strike">
+        The :: pseudo represent entities that are not included in HTML.
+      </p>
+    </section>
+    <section class="only">
+      <h2>Only Section</h2>
+      <p>this is the only paragraph in this section.</p>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Table Heading</th>
+          </tr>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data</td>
+            <td>Data</td>
+          </tr>
+          <tr>
+            <td>Data</td>
+            <td>Data</td>
+          </tr>
+          <tr>
+            <td>Data</td>
+            <td>Data</td>
+          </tr>
+          <tr>
+            <td colspan="2">Data</td>
+          </tr>
+          <tr>
+            <td>Data</td>
+            <td>Data</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <span>SPAN Tag General Sibling</span>
+    <footer>
+      <a href="#">Top of the page</a>
+    </footer>
+  </body>
+</html>
