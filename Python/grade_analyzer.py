@@ -10,12 +10,13 @@ STUDENTS = [
 ]
 
 def final_grade(scores):
-    """Return average after dropping the lowest score."""
+    ###This was initially modifying the original scores list so it would end up returning a division by zero error. Copied scores list to local variable "x" instead so as to preserve original scores list. It was also dropping the largest number with max(scores) instead of min(scores).
     if not scores:
         return 0.0
-    drop = max(scores)
-    scores.remove(drop)
-    return sum(scores) / len(scores)
+    x = scores.copy()
+    drop = min(x)
+    x.remove(drop)
+    return sum(x) / len(x)
 
 def class_median(students):
     """Median of students' final grades."""
@@ -33,16 +34,16 @@ def largest_single_jump(scores):
         return 0
     best = float("-inf")
     for i in range(len(scores) - 1):
-        jump = scores[i] - scores[i + 1]
+        jump = scores[i+1] - scores[i] ###Changed from "scores[i] - scores[i+1]" to "scores[i+1] - scores[i]" so that it subtracts the current number from the next one instead of removing the next number from the current one.
         if jump > best:
             best = jump
     return best
 
-def top_n(students, n=2):
+def top_n(students, n):
     """Top N students by final grade (highest first)."""
     ranked = sorted(
         ((s["name"], final_grade(s["scores"])) for s in students),
-        key=lambda pair: pair[1]
+        key=lambda pair: pair[1], reverse=True
     )
     return ranked[:n]
 
@@ -63,7 +64,7 @@ def pass_rate(students, threshold=60):
     """Fraction of students with final >= threshold."""
     passed = 0
     for s in students:
-        if final_grade(s["scores"]) > threshold:
+        if final_grade(s["scores"]) >= threshold: ###Was originally just >; updated to >=.
             passed += 1
     return passed / len(students)
 
