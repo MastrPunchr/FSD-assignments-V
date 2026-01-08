@@ -9,10 +9,7 @@ STUDENTS = [
     {"name": "Dana",   "scores": [80, 84, 79, 85]},
 ]
 
-ranked_names = []
-
 def final_grade(scores):
-    ###This was initially modifying the original scores list so it would end up returning a division by zero error. Copied scores list to local variable "x" instead so as to preserve original scores list. It was also dropping the largest number with max(scores) instead of min(scores).
     if not scores:
         return 0.0
     x = scores.copy()
@@ -21,7 +18,7 @@ def final_grade(scores):
     return sum(x) / len(x)
 
 def class_median(students):
-    """Median of students' final grades.""" ###now solves for the median if the amount of students is even, nothing changes for an odd amount of students
+    """Median of students' final grades."""
     finals = sorted(final_grade(s["scores"]) for s in students)
     n = len(finals)
     mid = n // 2
@@ -39,17 +36,18 @@ def largest_single_jump(scores):
         return 0
     best = float("-inf")
     for i in range(len(scores) - 1):
-        jump = scores[i+1] - scores[i] ###Changed from "scores[i] - scores[i+1]" to "scores[i+1] - scores[i]" so that it subtracts the current number from the next one instead of removing the next number from the current one.
+        jump = scores[i+1] - scores[i]
         if jump > best:
             best = jump
     return best
 
 def top_n(students, n):
-    """Top N students by final grade (highest first).""" ###loop created to add the names to a separate list so that it is not printing tuples or the grades. N is now passed through when function called instead of always being 2.
+    """Top N students by final grade (highest first).""" 
     ranked = sorted(
         ((s["name"], final_grade(s["scores"])) for s in students),
         key=lambda pair: pair[1], reverse=True
     )
+    ranked_names = []
     for i in ranked:
         ranked_names.append(i[0])
 
@@ -68,13 +66,13 @@ def assignment_averages(students):
         avgs.append(total / len(students))
     return avgs
 
-def pass_rate(students, threshold): ###Threshold will no longer always be 60 and is passed through when the function is called
+def pass_rate(students, threshold):
     """Fraction of students with final >= threshold."""
     passed = 0
     for s in students:
-        if final_grade(s["scores"]) >= threshold: ###Was originally just >; updated to >=.
+        if final_grade(s["scores"]) >= threshold:
             passed += 1
-    return passed / len(students) * 100 ###Multiplying by 100 to get a proper percentage
+    return passed / len(students) * 100
 
 def summarize():
     print("=== Finals by student (drop-lowest intended) ===")
@@ -95,7 +93,7 @@ def summarize():
     print(assignment_averages(STUDENTS))
 
     print("\n=== Pass rate at threshold 60 (>= should pass) ===")
-    print(f"Pass rate: {pass_rate(STUDENTS, threshold=60):.2f}%") ###Now displays pass rate as a percentage
+    print(f"Pass rate: {pass_rate(STUDENTS, threshold=60):.2f}%")
 
 if __name__ == "__main__":
     summarize()
