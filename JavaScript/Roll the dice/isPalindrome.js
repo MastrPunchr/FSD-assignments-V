@@ -1,5 +1,9 @@
 function isPalindrome(stringInput) {
-    let reversed = stringInput.toLowerCase().split('').reverse().join(''); //first casts to lowercase, then splits, reverses, and rejoins them to get a palindrome
+    let reversedList = stringInput.toLowerCase().split(''); //first casts to lowercase, then splits to later be reversed and joined back together since apparently I'm not allowed to have ANY prior knowledge in this course and use built in functions instead of rewriting them in a way that is less efficient.
+    let reversed = "";
+    for(let i = reversedList.length; i > 0; i--){ //adds characters to the string going backwards since .join() was just too easy (YES I'm salty about this and YES I am going to stay mad)
+        reversed += reversedList[i-1];
+    }
     return (reversed == stringInput.toLowerCase() && reversed != "") ? true : false;// checks if it is a palindrome or not and if it is not an empty string
 }
 
