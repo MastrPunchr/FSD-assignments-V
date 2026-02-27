@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 function main(){
-    let players = [{name: "temp", inventory: {milk: 2, banana: 3}}, {name: "george", inventory: {pee: 3}}];
+    let players = [{name: "temp", inventory: {milk: 2, banana: 3}}];
 
     function addPlayer(){
         let named = prompt("Enter the player name (leave blank to exit): ");
@@ -158,12 +158,16 @@ function main(){
     }
 
     function display(){
-        for(let i = 0; i < players.length; i++){
-            let playerInventory = [];
-            for(key in players[i].inventory){
-                playerInventory.push(`"${key}: ${players[i].inventory[key]}"`);
+        if(players.length > 0){
+            for(let i = 0; i < players.length; i++){
+                let playerInventory = [];
+                for(key in players[i].inventory){
+                    playerInventory.push(`"${key}: ${players[i].inventory[key]}"`);
+                }
+                console.log(`${players[i].name}, inventory = [${playerInventory}]`);
             }
-            console.log(`${players[i].name}, inventory = [${playerInventory}]`);
+        } else {
+            console.log("No players in database.");
         }
     }
 
