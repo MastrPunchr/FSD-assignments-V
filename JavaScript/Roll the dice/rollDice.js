@@ -24,14 +24,14 @@ function rollDice(sides){
         console.log(`${counter}.\n Die 1: ${dice1}\n Die 2: ${dice2}`);
         rolls++;
         counter++;
+        firstAvg += dice1;
+        secondAvg += dice2;
+        if(dice1 == dice2) doubles++;
         if(dice1 == 1 && dice2 == 1){
             firstAvg /= (rolls-1);
             secondAvg /= (rolls-1);
             snakEyes = true;
         }
-        firstAvg += dice1;
-        secondAvg += dice2;
-        if(dice1 == dice2) doubles++;
     }
     return [rolls, doubles, firstAvg, secondAvg];
 }
