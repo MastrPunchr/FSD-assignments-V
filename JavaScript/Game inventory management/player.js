@@ -4,18 +4,35 @@ function main(){
     let players = [{name: "temp", inventory: {milk: 2, banana: 3}}, {name: "george", inventory: {pee: 3}}];
 
     function addPlayer(){
-        let name = prompt("Enter the player name (leave blank to exit): ");
-        if(!name){
+        let named = prompt("Enter the player name (leave blank to exit): ");
+        if(!named){
             return;
         } else {
-            players.push({name: name, inventory: {}});
+            //Check if named is already a player
+            for(let i = 0; i < players.length; i++){
+                if(players[i].name == named){
+                    console.log(`Player ${named} already exists in database.`);
+                    return;
+                }
+            }
+            players.push({name: named, inventory: {}});
             console.log(`Player added to the list! Current Players: ${players.length}`);
         }
     }
 
     function removePlayer(){
         let named = prompt("Enter the player name (leave blank to exit): ");
-        players = players.filter((player) => player.name != named);
+        for(let i = 0; i < players.length; i++){
+            //checks if the player exists or not
+            if(players[i].name == named){
+                players = players.filter((player) => player.name != named);
+                console.log(`${named} removed!`);
+                return;
+            } else {
+                continue;
+            }
+        }
+        console.log(`${named} not found in database.`);
     }
 
     function playerEdit(){
@@ -26,7 +43,7 @@ function main(){
             for(key in players[i].inventory){
                 playerInventory.push(`"${key}: ${players[i].inventory[key]}"`);
             }
-            console.log(`${i+1}.  ${players[i].name}, inventory = [${playerInventory}]`)
+            console.log(`${i+1}.  ${players[i].name}, inventory = [${playerInventory}]`);
         }
         console.log(`${players.length+1}.  Go Back`);
         do{
@@ -63,14 +80,20 @@ function main(){
         function changeName(){ //I considered using the option variable here but figured it would end up causing issues if the program were to be further expanded
             let rename = prompt("Enter the new username (leave blank for unchanged): ");
             if(!rename) return;
+            //Checks to make sure no other players already have this name
+            for(let i = 0; i < players.length; i++){
+                if(players[i].name == rename){
+                    console.log(`Player ${rename} already exists in database.`);
+                    return;
+                }
+            }
             players[choice].name = rename;
             console.log(`Name changed to ${rename}!`);
         }
 
         function editInventory(){
             do{
-                option = prompt(`Editing the inventory of ${players[choice].name}... What would you like to do? (1. add item, 2. remove item, 3. list items, 4. Go Back)\n> `)
-
+                option = prompt(`Editing the inventory of ${players[choice].name}... What would you like to do? (1. add item, 2. remove item, 3. list items, 4. Go Back)\n> `);
                 switch(option){
                     case "1":
                         addItem();
@@ -140,7 +163,7 @@ function main(){
             for(key in players[i].inventory){
                 playerInventory.push(`"${key}: ${players[i].inventory[key]}"`);
             }
-            console.log(`${players[i].name}, inventory = [${playerInventory}]`)
+            console.log(`${players[i].name}, inventory = [${playerInventory}]`);
         }
     }
 
