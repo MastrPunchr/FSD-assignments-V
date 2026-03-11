@@ -1,0 +1,15 @@
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/bin/Debug/net10.0/FirstProject
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/bin/Debug/net10.0/FirstProject.deps.json
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/bin/Debug/net10.0/FirstProject.runtimeconfig.json
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/bin/Debug/net10.0/FirstProject.dll
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/bin/Debug/net10.0/FirstProject.pdb
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.AssemblyInfoInputs.cache
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.AssemblyInfo.cs
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.csproj.CoreCompileInputs.cache
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.sourcelink.json
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.dll
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/refint/FirstProject.dll
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.pdb
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/FirstProject.genruntimeconfig.cache
+/home/valkyrie/Documents/FSD-assignments-V/dotNet/FirstProject/FirstProject/obj/Debug/net10.0/ref/FirstProject.dll
