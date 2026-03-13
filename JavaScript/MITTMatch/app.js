@@ -13,25 +13,26 @@
 
     return array;
   }
-  const cards = document.querySelectorAll(".card");
+  let cards = document.querySelectorAll(".card");
   const restart = document.querySelector(".restart");
   let score = 0;
   let scoreCard = document.getElementById("score");
-  let cardClasses = ["fas fa-atom", "fas fa-frog", "fas fa-feather-alt", "fas fa-cogs", "fas fa-anchor", "fas fa-fan", "fas fa-bolt", "fas fa-hat-wizard", "fas fa-apple-alt", "fas fa-bell", "fas fa-bomb", "fas fa-brain"];
+
   scoreCard.textContent = score;
 
-   cards.forEach((card, i) => {
+   cards.forEach((card) => {
     card.addEventListener("click", () => {
       score++;
       scoreCard.textContent = score;
-      card.className = "cards matched";
+      card.className = "card show";
     });
-    card.children.className = cardClasses[i]; 
   });
 
   restart.addEventListener("click", () => {
     score = 0;
     scoreCard.textContent = score;
-    cardClasses = shuffle(cardClasses);
+    cards.forEach((card) => {
+      card.className = "card";
+    });
   });
 
