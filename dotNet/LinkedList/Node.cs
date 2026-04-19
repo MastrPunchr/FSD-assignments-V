@@ -2,21 +2,17 @@ namespace LinkedList;
 
 public class Node
 {
-    private int _data;
-    private Node _next;
-
-    public int Data
-    {
-        get => _data;
-        set => _data = value;
-    }
+    public int Data { get; set; }
 
     public Node Next { get; set; }
+
+    public Node Prev { get; set; }
 
     public Node(int value)
     {
         Data = value;
         Next = null;
+        Prev = null;
     }
 
     public override string ToString()
