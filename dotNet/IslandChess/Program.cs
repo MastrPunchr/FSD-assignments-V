@@ -5,5 +5,8 @@ class Program
     {
         Islands map = new Islands();
         map.MapPathing("Islands.txt");
+
+        KnightPath path = new KnightPath();
+        path.UserInput();
     }
 }
