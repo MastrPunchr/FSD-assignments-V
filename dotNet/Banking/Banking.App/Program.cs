@@ -1,14 +1,29 @@
 ﻿using Banking.Core;
 
-var account = new BankAccount("ACC-000001");
-account.Deposit(100m);
+Bank bank = new Bank();
 
-Console.WriteLine(account.GetBalance());
+Customer alice = new Customer
+{
+    FirstName = "Alice",
+    LastName = "Nguyen",
+    Email = "alice@example.com"
+};
+
+ChequingAccount c1 = bank.OpenChequingAccount(alice);
+SavingsAccount s1 = bank.OpenSavingsAccount(alice, 0.2m);
+
+c1.Deposit(200m);
+s1.Deposit(1_000m);
 try
 {
-    account.Withdraw(5000m);
+    c1.Withdraw(600m);
 }
 catch (Exception ex)
 {
-    Console.WriteLine(ex.Message);
+    Console.WriteLine($"Insufficient funds.", ex.Message);
+}
+bank.RunMonthEnd();
+foreach (Transaction transaction in c1.Transactions)
+{
+    Console.WriteLine(transaction);
 }

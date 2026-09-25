@@ -1,6 +1,6 @@
 namespace Banking.Core;
 
-public class SavingAccount : BankAccount
+public class SavingsAccount : BankAccount
 {
     private decimal _annualInterestRate;
 
@@ -16,9 +16,17 @@ public class SavingAccount : BankAccount
         }
     }
 
-    internal SavingAccount(string accountNumber, Customer owner, decimal annualInterestRate) : base(accountNumber, owner)
+    internal SavingsAccount(string accountNumber, Customer owner, decimal annualInterestRate) : base(accountNumber, owner)
     {
         AnnualInterestRate = annualInterestRate;
+    }
+
+    internal void ApplyMonthlyInterest()
+    {
+        if(Balance <= 0m)
+            return;
+        decimal interest = Math.Round(Balance * AnnualInterestRate / 12m, 2);
+        PostTransaction(interest, "Monthly Interest");
     }
 
     protected override decimal OverdraftLimit => 500m;

@@ -3,6 +3,12 @@
 public abstract class BankAccount
 {
     private readonly List<Transaction> _transactions = new();
+
+    public List<Transaction> Transactions
+    {
+        get => _transactions;
+    }
+
     private string _accountNumber = "";
     private decimal _balance;
     private Customer _owner;
