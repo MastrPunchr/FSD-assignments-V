@@ -4,6 +4,7 @@ public class CreditCardPayment : OnlinePayment
 {   public string CardNumber { get; }
     public string ExpiryDate { get; }
     public int Cvv { get; }
+    public string PaymentGateway { get; }
 
     public CreditCardPayment(string cardNumber, string expiryDate, int cvv, string paymentGateway, decimal amount,
         string currency) : base(paymentGateway, amount, currency)
@@ -11,6 +12,7 @@ public class CreditCardPayment : OnlinePayment
         CardNumber = cardNumber;
         ExpiryDate = expiryDate;
         Cvv = cvv;
+        PaymentGateway = paymentGateway;
     }
 
     public override void ProcessPayment()

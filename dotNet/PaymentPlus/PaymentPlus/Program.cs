@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using PaymentPlus;
+﻿namespace PaymentPlus;
 
-class Program
+static class Program
 {
     public static void Main(string[] args)
     {
@@ -49,11 +47,11 @@ class Program
         paymentManager.AuthorizePayments();
         paymentManager.RecordOffline();
         paymentManager.ProcessPayments();
-     }
+    }
 }
 
 /* OUTPUT:
- * 
+*
 Credit Card Payment of 9.99 USD from Credit Card number **** **** **** 4456 through VISA gateway was not valid, hence removed from the list.
 Credit Card Payment of 2 USD from Credit Card number **** **** **** 4456 through VISA gateway was not valid, hence removed from the list.
 Credit Card Payment of 9 EUR from Credit Card number **** **** **** 2222 through VISA gateway was not valid, hence removed from the list.

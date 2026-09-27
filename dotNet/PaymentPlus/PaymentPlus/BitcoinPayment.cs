@@ -3,11 +3,13 @@ namespace PaymentPlus;
 public class BitcoinPayment : OnlinePayment
 {
     public string WalletId { get; }
+    public string PaymentGateway { get; }
 
     public BitcoinPayment(string walletId, string paymentGateway, decimal amount,
         string currency) : base(paymentGateway, amount, currency)
     {
         WalletId = walletId;
+        PaymentGateway = paymentGateway;
     }
 
     public override void ProcessPayment()
