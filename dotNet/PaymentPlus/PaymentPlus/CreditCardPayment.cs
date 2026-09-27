@@ -15,7 +15,7 @@ public class CreditCardPayment : OnlinePayment
 
     public override void ProcessPayment()
     {
-        Console.WriteLine($"Type: Credit\nAmount: {Amount:C}");
+        Console.WriteLine("Credit Card Payment successfully processed.");
     }
 
     public override bool ValidatePayment()

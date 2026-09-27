@@ -17,28 +17,28 @@ class Program
             new CreditCardPayment("1345 7841 2345 2222", "01/25", 334, "VISA", 9.00m, "EUR"),   // Invalid (below €10.00 EUR)
 
             // Valid BitcoinPayments
-            new BitcoinPayment("WID#5314321", "PayPal", 21.20, "USD"),  // Valid (above $5.00 USD)
-            new BitcoinPayment("WID#234435781", "Stripe", 33.20, "CAD"),  // Valid (above $5.00 CAD)
+            new BitcoinPayment("WID#5314321", "PayPal", 21.20m, "USD"),  // Valid (above $5.00 USD)
+            new BitcoinPayment("WID#234435781", "Stripe", 33.20m, "CAD"),  // Valid (above $5.00 CAD)
 
             // Invalid BitcoinPayment
-            new BitcoinPayment("WID#533462921", "Stripe", 4.50, "USD"),   // Invalid (below $5.00 USD)
-            new BitcoinPayment("WID#234435781", "Stripe", 33.99, "CAD"),  // Invalid (ends in .99)
+            new BitcoinPayment("WID#533462921", "Stripe", 4.50m, "USD"),   // Invalid (below $5.00 USD)
+            new BitcoinPayment("WID#234435781", "Stripe", 33.99m, "CAD"),  // Invalid (ends in .99)
 
 
             // Valid CashPayments
-            new CashPayment(6543.99, "USD"),   // Valid (cash can end in .99)
+            new CashPayment(6543.99m, "USD"),   // Valid (cash can end in .99)
     
             // Invalid CashPayments
-            new CashPayment(6543.00, "EUR"),   // Invalid (cash not accepted in EUR)
+            new CashPayment(6543.00m, "EUR"),   // Invalid (cash not accepted in EUR)
 
             // Valid ChequePayments
-            new ChequePayment(42156, "ScotiaBank", 6341.00, "CAD"),  // Valid (whole amount in CAD)
-            new ChequePayment(42156, "ScotiaBank", 6341.32, "CAD"),  // Valid (non whole amount but in CAD)
-            new ChequePayment(42156, "ScotiaBank", 3000.00, "USD"),  // Valid (whole amount in USD)
+            new ChequePayment(42156, "ScotiaBank", 6341.00m, "CAD"),  // Valid (whole amount in CAD)
+            new ChequePayment(42156, "ScotiaBank", 6341.32m, "CAD"),  // Valid (non whole amount but in CAD)
+            new ChequePayment(42156, "ScotiaBank", 3000.00m, "USD"),  // Valid (whole amount in USD)
     
             // Invalid ChequePayments
-            new ChequePayment(42156, "ScotiaBank", 6341.05, "USD"),  // Invalid (non-whole amount in USD)
-            new ChequePayment(42156, "ScotiaBank", 1500.98, "EUR"),   // Invalid (non-whole amount in EUR)
+            new ChequePayment(42156, "ScotiaBank", 6341.05m, "USD"),  // Invalid (non-whole amount in USD)
+            new ChequePayment(42156, "ScotiaBank", 1500.98m, "EUR"),   // Invalid (non-whole amount in EUR)
         };
 
         PaymentManager paymentManager = new PaymentManager();
@@ -51,6 +51,7 @@ class Program
         paymentManager.ProcessPayments();
      }
 }
+
 /* OUTPUT:
  * 
 Credit Card Payment of 9.99 USD from Credit Card number **** **** **** 4456 through VISA gateway was not valid, hence removed from the list.

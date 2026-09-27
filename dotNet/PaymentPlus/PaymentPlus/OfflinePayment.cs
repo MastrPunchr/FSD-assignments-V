@@ -2,7 +2,7 @@ namespace PaymentPlus;
 
 public abstract class OfflinePayment : Payment
 {
-    internal OfflinePayment(string paymentType, decimal amount, string currency) : base(amount, currency)
+    internal OfflinePayment(decimal amount, string currency) : base(amount, currency)
     {
         
     }
