@@ -1,7 +1,5 @@
 namespace Lab3;
-
-public interface ICategorize
+public interface ICategorizable
 {
-    public string Name { get; set; }
-    
+  public string Category {  get; set; }
 }

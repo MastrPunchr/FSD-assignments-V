@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿namespace Lab3;
 
 class Program{
     static List<IItem> inventory = new List<IItem>();
@@ -156,21 +154,25 @@ class Program{
         switch (type){
             case "1":
                 filteredItems = inventory.OfType<Artifact>().Cast<IItem>().ToList();
+        DisplayFilteredItems(filteredItems, category);
                 break;
             case "2":
                 filteredItems = inventory.OfType<Grimoire>().Cast<IItem>().ToList();
+                DisplayFilteredItems(filteredItems, category);
                 break;
             case "3":
                 filteredItems = inventory.OfType<Tool>().Cast<IItem>().ToList();
                 if (filteredItems.Any()){
                     category = SelectCategory(filteredItems.OfType<ICategorizable>());
                 }
+                DisplayFilteredItems(filteredItems, category);
                 break;
             case "4":
                 filteredItems = inventory.OfType<Wand>().Cast<IItem>().ToList();
                 if (filteredItems.Any()){
                     category = SelectCategory(filteredItems.OfType<ICategorizable>());
                 }
+                DisplayFilteredItems(filteredItems, category);
                 break;
             default:
                 Console.WriteLine("Invalid item type.");
