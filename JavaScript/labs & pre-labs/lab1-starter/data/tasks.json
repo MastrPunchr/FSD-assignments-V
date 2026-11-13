@@ -1,0 +1,17 @@
+[
+  { "id": 1, "title": "Write project report", "priority": "high", "duration": 90, "done": false, "tags": ["work", "writing"] },
+  { "id": 2, "title": "Review pull request", "priority": "medium", "duration": 30, "done": true, "tags": ["work", "code"] },
+  { "id": 3, "title": "Buy groceries", "priority": "low", "duration": 45, "done": false, "tags": ["errands"] },
+  { "id": 4, "title": "Fix login bug", "priority": "high", "duration": 120, "done": false, "tags": ["work", "code", "urgent"] },
+  { "id": 5, "title": "Call the dentist", "priority": "medium", "duration": 10, "done": false },
+  { "id": 6, "title": "Study for Term Test 1", "priority": "high", "duration": 180, "done": false, "tags": ["school"] },
+  { "id": 7, "title": "Water the plants", "priority": "low", "duration": 5, "done": true, "tags": [] },
+  { "id": 8, "title": "Update resume", "priority": "medium", "duration": 60, "done": false, "tags": ["career", "writing"] },
+  { "id": 9, "title": "Deploy staging build", "priority": "urgent", "duration": 20, "done": false, "tags": ["work"] },
+  { "id": 10, "title": "Read chapter 4", "priority": "low", "duration": "40", "done": false, "tags": ["school"] },
+  { "id": 11, "title": "Plan team meeting", "priority": "medium", "done": false, "tags": ["work"] },
+  { "id": 12, "title": "Clean up Git branches", "priority": "low", "duration": 15, "done": false, "tags": ["code"] },
+  { "id": 13, "title": "Book flights", "priority": "medium", "duration": 25, "done": "no", "tags": ["errands", "travel"] },
+  { "id": 14, "title": "Pay phone bill", "priority": "high", "duration": 5, "done": false, "tags": ["errands", "urgent"] },
+  null
+]
