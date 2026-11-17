@@ -1,4 +1,4 @@
-import type { ParseResult, Priority, SortDirection, Task } from './types.ts';
+import type { ParseResult, Priority, SortDirection, Task } from "./types.ts";
 
 // Each function below currently throws "Not implemented".
 // Replace the `throw` line with your implementation.
@@ -11,7 +11,8 @@ import type { ParseResult, Priority, SortDirection, Task } from './types.ts';
 // Returns true if value is exactly 'low', 'medium', or 'high'.
 // Any other value, including 'HIGH', '', null, or a number, returns false.
 export function isPriority(value: unknown): value is Priority {
-  throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+    return value === "low" || value === "medium" || value === "high";
 }
 
 // Returns true if value is a valid Task:
@@ -24,7 +25,11 @@ export function isPriority(value: unknown): value is Priority {
 //   - tags is either missing/undefined, or an array in which every element is a string
 // Check each property with `'name' in value` before reading it (see the isUser example in Lesson 3).
 export function isTask(value: unknown): value is Task {
-  throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+
+    //TO-DO: do the in operator for tags, not sure if it will work since it could possibly be null or undefined but could also be an array of strings
+    if (typeof value === "object" && value !== null && 'id' in value && Number.isInteger(value.id) && 'title' in value && typeof value.title === "string" && value.title.trim() && 'priority' in value && isPriority(value.priority) && 'duration' in value && typeof value.duration === 'number' && value.duration > 0 && 'done' in value && typeof value.done === "boolean" && ) return true;
+    return false;
 }
 
 // Parses a JSON string and keeps only the entries that are valid tasks.
@@ -33,7 +38,7 @@ export function isTask(value: unknown): value is Task {
 //   - If the parsed data is not an array, throw new Error('Task data must be a JSON array.')
 //   - Return the valid tasks, and the number of entries that were not valid tasks.
 export function parseTasks(json: string): ParseResult {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // ---------------------------------------------------------------------------
@@ -47,43 +52,46 @@ export function parseTasks(json: string): ParseResult {
 // A task whose tags array is missing OR empty shows "(no tags)".
 // Use destructuring, a ternary, and optional chaining.
 export function formatTask(task: Task): string {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // Returns only the tasks with the given priority, in their original order.
 export function getTasksByPriority(tasks: Task[], priority: Priority): Task[] {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // Returns the sum of all task durations. Returns 0 for an empty list (it must not throw).
 export function getTotalDuration(tasks: Task[]): number {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // Returns the total duration for each priority, for example { low: 5, medium: 40, high: 165 }.
 // All three priorities must appear, with 0 when no task has that priority.
 // Use reduce() with { low: 0, medium: 0, high: 0 } as the initial value.
 export function getDurationByPriority(tasks: Task[]): Record<Priority, number> {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // Returns a NEW array sorted by duration: shortest first for 'asc' (the default),
 // longest first for 'desc'. The original array must keep its order.
-export function sortByDuration(tasks: Task[], direction: SortDirection = 'asc'): Task[] {
-  throw new Error('Not implemented');
+export function sortByDuration(
+    tasks: Task[],
+    direction: SortDirection = "asc",
+): Task[] {
+    throw new Error("Not implemented");
 }
 
 // Returns a NEW array in which the task with the given id has done: true.
 // Do not change the original task object: create a new one with the spread operator.
 // Every other task stays exactly as it was.
 export function completeTask(tasks: Task[], id: number): Task[] {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // Counts how many tasks use each tag, for example { work: 3, writing: 1, code: 2 }.
 // Tasks without tags contribute nothing. Returns {} if no task has tags.
 export function getTagCounts(tasks: Task[]): Record<string, number> {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
 
 // ---------------------------------------------------------------------------
@@ -95,5 +103,5 @@ export function getTagCounts(tasks: Task[]): Record<string, number> {
 // Example: getTopTags(tasks, 2) might return ['work', 'code'].
 // Hint: Object.entries(getTagCounts(tasks)), then toSorted(), slice(), and map().
 export function getTopTags(tasks: Task[], n: number): string[] {
-  throw new Error('Not implemented');
+    throw new Error("Not implemented");
 }
