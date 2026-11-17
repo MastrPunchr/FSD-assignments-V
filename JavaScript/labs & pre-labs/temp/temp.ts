@@ -55,48 +55,5 @@ failed
     .then(value => console.log(value))
     .catch(error => console.log(error));
 
+// DIFFERENT THING
 
-
-// 1. Create a promise that resolves with 'Done!' after 2 seconds, and print the value with    .then()
-const sugma = new Promise(resolve => {
-    setTimeout(() => resolve("done!"), 2000);
-});
-
-// 2. Set const num = 7;. Create a promise that resolves with num if it is even and rejects with the error '7 is odd' if it is odd. With .then(), print '<num> is even'; with .catch(), print the error message. Test it with 7 and with 8.
-const num = 7;
-const p2 = new Promise((resolve, reject) =>{
-    if(num%2===0)
-        resolve(num);
-    else
-        reject(new Error(`${num} is odd`));
-});
-
-// 3. Dice roll. After 1 second, pick a random number from 1 to 6. Resolve with the number if it is 4 or higher; otherwise reject with 'You rolled <n>. You lose.'. Print 'Rolling...' immediately, and on success print 'You rolled <n>. You win!'.
-// Hint: Math.floor(Math.random() * 6) + 1
-
-const dice = new Promise((resolve, reject) => {
-    console.log("Rolling...") ;
-    let n = setTimeout (() => Math.floor(Math.random() * 6) + 1, 1000);
-    if(n >= 4)
-        resolve(`You rolled ${n}. You win!`);
-    else
-        reject(`You rolled ${n}, You lose.`);
-});
-
-// 4. Write a function checkAge(age: number): Promise<string>. After 1 second, it resolves with 'Access granted' if age >= 18, and otherwise rejects with 'Access denied: must be 18 or older'. Call it with 25 and with 15.
-
-function checkAge(age: number) : Promise<string> {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if(age >= 18)
-                resolve('Access granted');
-            else
-                reject(new Error('Access denied: must be 18 or older'));
-        }, 1000)
-    })
-}
-
-// 5. (challenge). Write orderPizza(topping: string): Promise<string>. The available toppings are ['cheese', 'pepperoni', 'mushroom']. After 2 seconds, resolve with 'Your <topping> pizza is ready' if the topping is available, and otherwise reject with 'Sorry, we have no <topping>'. Then:
-// Print 'Order placed'.
-// Order pepperoni and pineapple.
-// Print 'Waiting for pizza...'.

@@ -1,0 +1,19 @@
+{
+  "name": "sd510-unit2-practice",
+  "version": "1.0.0",
+  "description": "SD 510 Unit 2 in-class practice exercises",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test:lesson1": "node --test \"lesson1/*.test.ts\"",
+    "typecheck": "tsc"
+  },
+  "engines": {
+    "node": ">=24.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "l": "^0.6.0",
+    "typescript": "^7.0.2"
+  }
+}
