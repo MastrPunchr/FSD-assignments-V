@@ -26,9 +26,7 @@ export function isPriority(value: unknown): value is Priority {
 // Check each property with `'name' in value` before reading it (see the isUser example in Lesson 3).
 export function isTask(value: unknown): value is Task {
     // throw new Error('Not implemented');
-
-    //TO-DO: do the in operator for tags, not sure if it will work since it could possibly be null or undefined but could also be an array of strings
-    if (typeof value === "object" && value !== null && 'id' in value && Number.isInteger(value.id) && 'title' in value && typeof value.title === "string" && value.title.trim() && 'priority' in value && isPriority(value.priority) && 'duration' in value && typeof value.duration === 'number' && value.duration > 0 && 'done' in value && typeof value.done === "boolean" && ) return true;
+    if (typeof value === "object" && value !== null && 'id' in value && Number.isInteger(value.id) && 'title' in value && typeof value.title === "string" && value.title.trim() && 'priority' in value && isPriority(value.priority) && 'duration' in value && typeof value.duration === "number" && value.duration > 0 && 'done' in value && typeof value.done === "boolean" && 'tags' in value &&  (typeof value.tags === 'object' && Array.isArray(value.tags) && value.tags.every(item => typeof item === 'string') || typeof value.tags === 'undefined')) return true;
     return false;
 }
 
