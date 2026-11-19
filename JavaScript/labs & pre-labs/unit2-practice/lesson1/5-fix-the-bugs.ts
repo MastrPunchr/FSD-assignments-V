@@ -7,21 +7,22 @@ import { getUser, getOrders, type User } from './api.ts';
 
 // Resolves with the number of orders the user has placed.
 export async function countOrders(userId: number): Promise<number> {
-  const orders = getOrders(userId);
+  const orders = await getOrders(userId);
   return orders.length;
 }
 
 // Resolves with the user's email.
 export function getUserEmail(id: number): Promise<string> {
   return getUser(id).then(user => {
-    user.email;
+    return user.email;
   });
 }
 
 // Resolves with the user, or null if getUser rejects.
 export async function findUser(id: number): Promise<User | null> {
   try {
-    return getUser(id);
+    const user = await getUser(id);
+    return user;
   } catch {
     return null;
   }
@@ -31,9 +32,13 @@ export async function findUser(id: number): Promise<User | null> {
 // Resolves with the total of all orders placed by all of these users.
 export async function getTotalForUsers(userIds: number[]): Promise<number> {
   let total = 0;
-  userIds.forEach(async id => {
+  // userIds.forEach(async id => {
+  //   const orders = await getOrders(id);
+  //   total += orders.reduce((sum, order) => sum + order.total, 0);
+  // });
+  for(const id of userIds){
     const orders = await getOrders(id);
     total += orders.reduce((sum, order) => sum + order.total, 0);
-  });
+  }
   return total;
 }
