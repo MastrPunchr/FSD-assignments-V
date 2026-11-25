@@ -1,0 +1,19 @@
+{
+  "name": "sd510-assignment1",
+  "version": "1.0.0",
+  "description": "SD 510 Assignment 1: Asynchronous Programming Fundamentals",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.ts",
+    "test": "node --test \"test/*.test.ts\"",
+    "typecheck": "tsc"
+  },
+  "engines": {
+    "node": ">=24.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.0",
+    "typescript": "^7.0.2"
+  }
+}
