@@ -9,5 +9,5 @@
     "allowImportingTsExtensions": true,
     "types": ["node"]
   },
-  "include": ["*.ts", "lesson1"]
+  "include": ["*.ts", "lesson1", "lesson2"]
 }
